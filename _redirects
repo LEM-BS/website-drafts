@@ -1,4 +1,3 @@
-# Redirect rules for Netlify
-/old-about.html      /about.html      301
-/old-contact.html    /contact.html    301
-/old-services.html   /services.html   301
+/enquiry  /thank-you  200
+/contact  /thank-you  200
+/thank-you  /thank-you.html  200

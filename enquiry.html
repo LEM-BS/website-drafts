@@ -1,82 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Request a professional property survey with LEM Building Surveying Ltd. Get a free quote today.">
-    <meta name="keywords" content="Survey Enquiry, Get a Quote, Building Survey Request, RICS Surveys, Connah’s Quay, Deeside, Flintshire">
-    <meta name="author" content="LEM Building Surveying Ltd">
-    <title>Enquiry Form | LEM Building Surveying Ltd</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Survey - LEM Building Surveying Ltd</title>
+  <meta name="description" content="Request a property survey from LEM Building Surveying Ltd. Fill out the form to get started.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>LEM Building Surveying Ltd</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="comparison.html">Survey Comparison</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="enquiry.html" class="cta active">Get a Quote</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Shared Header -->
+  <div id="header-include"></div>
 
-    <section class="enquiry-intro">
-        <div class="container">
-            <h2>Request a Survey</h2>
-            <p>Complete the form below to request a quote for your property survey.</p>
-        </div>
-    </section>
+  <section class="enquiry-page">
+    <div class="enquiry-form">
+      <h2>Request a Survey</h2>
+      <p>Please fill out the form below to request a property survey. We'll get back to you as soon as possible.</p>
 
-    <section class="enquiry-form">
-        <div class="container">
-            <form action="submit_form.php" method="POST">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
+      <form name="enquiry-form" method="POST" data-netlify="true" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="enquiry-form">
+        
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="address">Your Address:</label>
+        <input type="text" id="address" name="address">
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <label for="survey-type">Select Survey Type:</label>
+        <select id="survey-type" name="survey-type" required>
+          <option value="">-- Please Choose --</option>
+          <option value="level-1">RICS Level 1 Home Survey</option>
+          <option value="level-2">RICS Level 2 Home Survey</option>
+          <option value="level-3">RICS Level 3 Home Survey</option>
+          <option value="damp">Damp &amp; Timber Report</option>
+          <option value="fire-safety">Fire Safety Assessment</option>
+          <option value="measured">Measured Building Survey</option>
+          <option value="epc">Energy Performance Certificate (EPC)</option>
+          <option value="ventilation">Ventilation Assessment</option>
+          <option value="other">Other</option>
+        </select>
+        
+        <label for="details">Additional Details:</label>
+        <textarea id="details" name="details" rows="4"></textarea>
+        
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </section>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="property-type">Property Type:</label>
-                <select id="property-type" name="property_type" required>
-                    <option value="">Select Property Type</option>
-                    <option value="house">House</option>
-                    <option value="flat">Flat</option>
-                    <option value="bungalow">Bungalow</option>
-                    <option value="commercial">Commercial Property</option>
-                </select>
-
-                <label for="survey-type">Survey Type:</label>
-                <select id="survey-type" name="survey_type" required>
-                    <option value="">Select Survey Type</option>
-                    <option value="rics_level1">RICS Level 1</option>
-                    <option value="rics_level2">RICS Level 2 (Homebuyer Report)</option>
-                    <option value="rics_level3">RICS Level 3 (Building Survey)</option>
-                    <option value="damp_timber">Damp & Timber Report</option>
-                    <option value="epc">Energy Performance Certificate (EPC)</option>
-                    <option value="floorplan">Measured Survey & Floorplan</option>
-                </select>
-
-                <label for="message">Additional Information:</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-
-                <button type="submit">Submit Enquiry</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
-        </div>
-    </footer>
+  <footer>
+    <p>&copy; 2025 LEM Building Surveying Ltd. All rights reserved.</p>
+  </footer>
+  
+  <!-- JavaScript to inject header.html -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-include').innerHTML = data;
+        })
+        .catch(err => console.error('Header include failed:', err));
+    });
+  </script>
 </body>
 </html>
