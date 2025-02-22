@@ -1,160 +1,27 @@
 /* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-/* Header */
 header {
-    background: #004466;
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
+  background: #005a9c;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
 }
-
-header h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: auto;
 }
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: background 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    background: #0077b6;
-    border-radius: 5px;
-}
-
-/* Hero Section */
-.hero {
-    background: #0077b6;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.hero h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.button {
-    display: inline-block;
-    background: #004466;
-    color: #fff;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.button:hover {
-    background: #005f87;
-}
-
-/* Services Overview */
-.services-overview, .why-choose-us {
-    background: #fff;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.services-overview ul, .why-choose-us ul {
-    list-style: none;
-    margin-top: 15px;
-}
-
-.services-overview ul li, .why-choose-us ul li {
-    margin-bottom: 10px;
-}
-
-/* Contact & Enquiry Forms */
-.contact-form, .enquiry-form {
-    background: #fff;
-    padding: 40px 20px;
-}
-
-.contact-form form, .enquiry-form form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form label, .enquiry-form label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.contact-form input, .contact-form textarea,
-.enquiry-form input, .enquiry-form textarea,
-.enquiry-form select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact-form button, .enquiry-form button {
-    background: #004466;
-    color: #fff;
-    padding: 10px 15px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact-form button:hover, .enquiry-form button:hover {
-    background: #005f87;
-}
-
-/* Footer */
 footer {
-    background: #004466;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }

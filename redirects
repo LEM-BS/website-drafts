@@ -1,4 +1,4 @@
-# Redirect rules for Netlify
+# Example redirects file
 /old-about.html      /about.html      301
 /old-contact.html    /contact.html    301
 /old-services.html   /services.html   301
